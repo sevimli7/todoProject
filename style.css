@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    margin-top: 20px;
+    
+}
+.btn-success{
+    margin-top: 10px;
+}
+.card{
+    border: 2px solid rgb(12, 90, 12);
+    border-radius: 10px;
+    background: rgb(162, 214, 175);
+}
+.close{
+    color: rgb(194, 19, 19);
+}
+#msj{
+    width: 100%;
+    background: rgb(209, 117, 117);
+    display: block;
+    border: 2px solid rgb(12, 90, 12);
+    border-radius: 5px;
+    padding: 10px;
+}
