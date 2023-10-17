@@ -1,11 +1,11 @@
 
-const form=document.querySelector("#todo-form");
-const todoInput=document.getElementById("todo");
-const ull=document.querySelector(".list-group");
-const cardBody=document.querySelectorAll(".card-body")[0];
-const cardBody2=document.querySelectorAll(".card-body")[1];
-const filter=document.getElementById("filter");
-const deleteTask=document.querySelector(".clear-todos");
+const form=document.querySelector("#todo-form");//form
+const todoInput=document.getElementById("todo");//formun içindeki input
+const ull=document.querySelector(".list-group");//todoları içinde tutacak ul
+const cardBody=document.querySelectorAll(".card-body")[0];//formun içinde bulunduğu kartbadi-alert eklenecek
+const cardBody2=document.querySelectorAll(".card-body")[1];//ul yi içinde bulunduran kartbadi
+const filter=document.getElementById("filter");//filtreleme inputu
+const deleteTask=document.querySelector(".clear-todos");//tüm taskları temizle butonu
 
 
 eventListeners();
@@ -26,8 +26,8 @@ function deleteAllTodos(){
         let listItems=document.querySelectorAll(".list-group-item");
       
         listItems.forEach((item)=>{
-            item.remove();
-            localStorage.clear();
+            item.remove(); //arayüzden sildi
+            localStorage.clear();//storagedan sildi
         })
         
     }
@@ -40,7 +40,7 @@ function filterTodos(e){
    
     listItems.forEach((listItem)=>{
         const text=listItem.textContent.toLowerCase();
-        if(text.indexOf(value)===-1){
+        if(text.indexOf(value)===-1){ //eşleşme bulamayınca -1 sonucu verir indexof fonksiyonu
             //bulamadı
             listItem.setAttribute("style","display:none !important");
         }else{
@@ -97,9 +97,7 @@ function addTodo(e){
   
     e.preventDefault();
 }
-function removeTodoFromStorage(e){
 
-}
 function getTodosFromStorage(){  //storageden  varsa todo dondurur
     let todos;
     if(localStorage.getItem("todos")===null){
