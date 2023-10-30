@@ -147,4 +147,5 @@ function addTodoToUI(newTodo){
 
 }
 
+//burada online düxeltme yaptım. repodaki dosya üzerine gelince "." tuşuna basınca değişiklik yapmamıza olanak sağlıyor
 
